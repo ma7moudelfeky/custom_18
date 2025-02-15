@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Farm Configuration Model -->
+    <record id="view_farm_configuration_tree" model="ir.ui.view">
+        <field name="name">farm.configuration.tree</field>
+        <field name="model">farm.configuration</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="farm_id" options="{'no_edit': True, 'no_create': True}"/>
+                <field name="longitude"/>
+                <field name="latitude"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_farm_configuration_form" model="ir.ui.view">
+        <field name="name">farm.configuration.form</field>
+        <field name="model">farm.configuration</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="farm_id" options="{'no_edit': True, 'no_create': True}"/>
+                            <field name="api_key"/>
+                        </group>
+                        <group>
+                            <field name="longitude"/>
+                            <field name="latitude"/>
+                        </group>
+                    </group>
+                    <notebook>
+
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Configuration -->
+    <record id="action_farm_configuration" model="ir.actions.act_window">
+        <field name="name">Farm Configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">farm.configuration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_farm_configuration_root"
+              name="Configuration"
+              sequence="10"
+              groups="es_weather_forecast.group_farm_manager"
+              parent="es_weather_forecast.menu_weather_forecast_root"/>
+
+    <menuitem id="menu_farm_configuration"
+              name="Farm Configuration"
+              parent="menu_farm_configuration_root"
+              action="action_farm_configuration"
+              groups="es_weather_forecast.group_farm_manager"
+              sequence="10"/>
+
+
+</odoo>

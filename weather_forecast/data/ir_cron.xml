@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="cron_fetch_weather_data" model="ir.cron">
+        <field name="name">Fetch Weather Data</field>
+        <field name="model_id" ref="model_farm_weather_data"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_fetch_weather_data()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="nextcall"
+               eval="(DateTime.now().replace(hour=2, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+
+
+</odoo>
