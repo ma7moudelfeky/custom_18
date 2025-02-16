@@ -17,8 +17,8 @@
     'depends': ['base', 'mail'],
 
     'data': [
-        'security/farm_security.xml',
-        'security/ir.model.access.csv',
+        "security/farm_security.xml",
+        "security/ir.model.access.csv",
         "views/farm_farm_views.xml",
         "views/farm_weather_data_views.xml",
         "views/farm_configuration_views.xml",
