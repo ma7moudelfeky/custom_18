@@ -21,7 +21,7 @@
                     <group>
                         <group>
                             <field name="name"/>
-                            <field name="farm_user" groups="es_weather_forecast.group_farm_manager"/>
+                            <field name="farm_user" groups="weather_forecast.group_farm_manager"/>
                             <field name="api_key"/>
                         </group>
                         <group>
@@ -45,13 +45,13 @@
 
     <menuitem id="menu_weather_forecast_root"
               name="Weather Forecast"
-              web_icon="es_weather_forecast,static/description/icon.png"
+              web_icon="weather_forecast,static/description/icon.png"
               sequence="1"/>
 
     <menuitem id="menu_farm_farm"
               name="Farms"
               parent="menu_weather_forecast_root"
-              action="es_weather_forecast.action_farm_farm"
+              action="weather_forecast.action_farm_farm"
               sequence="1"/>
 
 

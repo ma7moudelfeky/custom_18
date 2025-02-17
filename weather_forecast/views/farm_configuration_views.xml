@@ -49,14 +49,14 @@
     <menuitem id="menu_farm_configuration_root"
               name="Configuration"
               sequence="10"
-              groups="es_weather_forecast.group_farm_manager"
-              parent="es_weather_forecast.menu_weather_forecast_root"/>
+              groups="weather_forecast.group_farm_manager"
+              parent="weather_forecast.menu_weather_forecast_root"/>
 
     <menuitem id="menu_farm_configuration"
               name="Farm Configuration"
               parent="menu_farm_configuration_root"
               action="action_farm_configuration"
-              groups="es_weather_forecast.group_farm_manager"
+              groups="weather_forecast.group_farm_manager"
               sequence="10"/>
 
 

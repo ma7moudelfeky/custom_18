@@ -96,7 +96,7 @@
     <menuitem id="menu_farm_weather_data"
               name="Farms Weather Data"
               parent="menu_weather_forecast_root"
-              action="es_weather_forecast.action_farm_weather_data"
+              action="weather_forecast.action_farm_weather_data"
               sequence="2"/>
 
 

@@ -57,6 +57,6 @@
               name="Weather Data Configuration"
               parent="menu_farm_configuration_root"
               action="action_farm_weather_data_fields_config"
-              groups="es_weather_forecast.group_farm_manager"
+              groups="weather_forecast.group_farm_manager"
               sequence="20"/>
 </odoo>
