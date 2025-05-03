@@ -2,7 +2,7 @@ from reportlab.graphics import barcode
 
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
-
+_DEFAULT_BARCODE_FONT = 'Courier'
 
 class ProdcutLabel(models.TransientModel):
     _name = 'product.label'
@@ -163,10 +163,12 @@ class ProdcutLabel(models.TransientModel):
             if not barcode_value:
                 raise ValidationError(_('Please define barcode for %s!' % (product['name'])))
             try:
-                barcode.createBarcodeDrawing(self.barcode_template.barcode_type, value=barcode_value, format='png',
+                # createBarcodeDrawing('Code128', value='foo', format='png', width=100, height=100, humanReadable=1, fontName=_DEFAULT_BARCODE_FONT).asString('png')
+
+                barcode.createBarcodeDrawing('Code128', value=barcode_value, format='png',
                                              width=int(self.barcode_template.barcode_height),
                                              height=int(self.barcode_template.barcode_width),
-                                             humanReadable=self.barcode_template.humanreadable or False)
+                                             humanReadable=self.barcode_template.humanreadable or False, fontName=_DEFAULT_BARCODE_FONT)
             except:
                 raise ValidationError(
                     _('Select valid barcode type according barcode field value or check value in field!'))

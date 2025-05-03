@@ -15,12 +15,12 @@
                         <notebook>
                             <page string="Select Products To Print Barcode Label">
                                 <field name="product_lines" nolabel="1">
-                                    <list string="Product" editable="bottom">
+                                    <tree string="Product" editable="bottom">
                                         <field name="product_id"
                                                options='{"no_open": True,"no_create": 1, "no_create_edit": 1}'/>
                                         <field name="lot_id" invisible="1"/>
                                         <field name="qty"/>
-                                    </list>
+                                    </tree>
                                 </field>
                             </page>
                         </notebook>
@@ -52,7 +52,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="product.model_product_template"/>
-            <field name="binding_view_types">list,form</field>
+            <field name="binding_view_types">tree,form</field>
         </record>
 
         <record id="product_barcode_label" model="ir.actions.act_window">
@@ -62,7 +62,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="product.model_product_product"/>
-            <field name="binding_view_types">list,form</field>
+            <field name="binding_view_types">tree,form</field>
         </record>
 
         <record id="so_barcode_label" model="ir.actions.act_window">
@@ -72,7 +72,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="sale.model_sale_order"/>
-            <field name="binding_view_types">list,form</field>
+            <field name="binding_view_types">tree,form</field>
         </record>
 
         <record id="po_barcode_label" model="ir.actions.act_window">
@@ -82,7 +82,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="purchase.model_purchase_order"/>
-            <field name="binding_view_types">list,form</field>
+            <field name="binding_view_types">tree,form</field>
         </record>
 
         <record id="picking_barcode_label" model="ir.actions.act_window">
@@ -92,7 +92,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="stock.model_stock_picking"/>
-            <field name="binding_view_types">list,form</field>
+            <field name="binding_view_types">tree,form</field>
         </record>
 
         <record id="product_dynamic_labels" model="ir.actions.report">

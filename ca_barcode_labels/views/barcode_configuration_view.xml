@@ -6,10 +6,10 @@
             <field name="name">barcode.configuration.template.tree</field>
             <field name="model">barcode.configuration.template</field>
             <field name="arch" type="xml">
-                <list>
+                <tree>
                     <field name="name"/>
                     <field name="company_name"/>
-                </list>
+                </tree>
             </field>
         </record>
 
@@ -97,7 +97,7 @@
         <record id="action_barcode_config_template" model="ir.actions.act_window">
             <field name="name">Barcode Configuration Template</field>
             <field name="res_model">barcode.configuration.template</field>
-            <field name="view_mode">list,form</field>
+            <field name="view_mode">tree,form</field>
             <field name="target">current</field>
         </record>
 
