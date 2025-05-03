@@ -1,0 +1,15 @@
+.test{
+  display: grid;
+  grid-template-columns: 70px  70px;
+  grid-template-rows: 45px 45px;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.test > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
