@@ -240,7 +240,7 @@ class ReportProductLabel(models.AbstractModel):
                 product = self.env['product.product'].browse(int(rec['product_id']))
                 barcode_value = getattr(product, barcode_field, '')
                 # docs.append((product, rec['lot_number'], product.name_get()[0][1], barcode_value))
-                docs.append((product, rec['lot_number'], product.with_context().name_get()[0][1], barcode_value))
+                docs.append((product, rec['lot_number'], product.display_name, barcode_value))
 
         return {
             'is_humanreadable': self.check_hr(barcode_config),
